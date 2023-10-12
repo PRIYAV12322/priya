@@ -1,0 +1,28 @@
+select FirstName, LeaveType from `tblemployees`, `tblleavetype` where Empid=empid;
+
+
+SELECT LeaveType,count(*) as CountLeaves FROM `tblleaves` GROUP by LeaveType
+
+
+CREATE TABLE `PROJECTS` (
+  `id` int(11) NOT NULL,
+  `PNAME` varchar(200) DEFAULT NULL,
+  `Description` mediumtext DEFAULT NULL,
+  `CreationDate` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+INSERT INTO `PROJECTS` (`id`, `PNAME`, `Description`, `CreationDate`) VALUES
+(1, 'IOT', 'Industrial automation', '2017-11-01 12:07:56'),
+(2, 'ML', 'Machine Learning', '2017-11-06 13:16:09')
+
+
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`)
+
+ALTER TABLE `projects`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+
+
+
